@@ -5,7 +5,7 @@ backend:
   path: ./
   language:
     name: python
-    packageManager: poetry
+    packageManager: pip
     runtime: python3.13.x
   functions:
     - name: keywords-embedding-fastapi
