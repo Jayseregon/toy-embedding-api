@@ -12,7 +12,7 @@ class Keywords(BaseModel):
 
 @app.get("/")
 async def read_root():
-    return {"Hello": "Hello, World!"}
+    return {"greatings": "Welcome to the keyword embeddings API!"}
 
 
 @app.post("/embeddings", response_model=Embeddings)
