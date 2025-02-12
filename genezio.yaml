@@ -1,15 +1,15 @@
-backend:
-    functions:
-        - entry: app/main.py
-          handler: app
-          name: function-fastapi
-          path: .
-          type: httpServer
-    language:
-        name: python
-        packageManager: pip
-        runtime: python3.13.x
-    path: .
 name: keywords-embedding-api
 region: us-east-1
 yamlVersion: 2
+backend:
+  path: ./
+  language:
+    name: python
+    packageManager: poetry
+    runtime: python3.13.x
+  functions:
+    - name: keywords-embedding-fastapi
+      path: ./
+      handler: app
+      entry: app/main.py
+      type: httpServer
