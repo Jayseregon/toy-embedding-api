@@ -2,7 +2,7 @@ backend:
     functions:
         - entry: app/main.py
           handler: app
-          name: fastapi
+          name: function-fastapi
           path: .
           type: httpServer
     language:
