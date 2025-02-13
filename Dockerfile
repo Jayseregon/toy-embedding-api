@@ -24,5 +24,10 @@ RUN apt-get purge -y --auto-remove build-essential && \
 # Copy application source code
 COPY ./src /code/src
 
+EXPOSE 10000
+
 # Change the CMD to use uvicorn with PORT env variable
-CMD "uvicorn src.main:app --host 0.0.0.0 --port $PORT"
+CMD ["sh", "-c", "uvicorn src.main:app --host 0.0.0.0 --port ${PORT:-10000}"]
+
+# # Change the CMD to use uvicorn with PORT env variable
+# CMD poetry run uvicorn src.main:app --host 0.0.0.0 --port $PORT
