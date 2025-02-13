@@ -1,0 +1,11 @@
+.venv
+.git
+.gitignore
+fly.toml
+.env.local
+_dev*/
+quiz.ipynb
+.github
+.ruff_cache
+.pytest_cache
+__pycache__
